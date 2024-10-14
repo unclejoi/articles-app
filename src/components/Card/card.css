@@ -1,0 +1,55 @@
+.card {
+  padding: 10px;
+  box-sizing: border-box;
+  min-height: 200px;
+  width: 450px;
+  font-size: 16px;
+  margin: 0 20px 20px 0;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+
+.card-title {
+  font-size: 24px;
+  letter-spacing: 0.5px;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.card-body {
+  margin-top: 20px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.hoverEffect {
+  position: absolute;
+  padding: 10px;
+  box-sizing: border-box;
+  min-height: 200px;
+  width: 450px;
+  font-size: 16px;
+  margin: 0 20px 20px 0;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px;
+  background-color: rgba(153, 152, 152, 0.4);
+  cursor: pointer;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 570px) {
+  .card-title {
+    white-space: normal;
+  }
+}

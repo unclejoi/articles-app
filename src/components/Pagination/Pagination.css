@@ -1,0 +1,38 @@
+.pagination {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.activePage {
+  background-color: #5396e0;
+  color: white;
+}
+
+.pager {
+  border: 0;
+  outline: 0;
+  height: 50px;
+  width: 50px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.pager:hover {
+  background-color: #5396e0;
+  color: white;
+}
+
+.arrowLeft {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.arrowRight {
+  transform: rotate(180deg);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
