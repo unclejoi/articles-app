@@ -1,50 +1,49 @@
-# React + TypeScript + Vite
+# Articles App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Features
+- Display all articles.
+- Search Articles by Id, UserId or Title.
+- Basic Authentication using username and email as password.
+- Protected Route features like Create Articles or Edit Articles.
+- Create Articles once authenticated.
+- Update Articles once authenticated.
 
-Currently, two official plugins are available:
+# Tech Stack
+- React v18
+- jsonplaceholder API
+- React-Toastify
+- React Router v6
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Get Started
+- Access via Stackblitz (https://stackblitz.com/~/github.com/unclejoi/articles-app);
+- Access by cloning the Repo: 
 
-## Expanding the ESLint configuration
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/unclejoi/articles-app.git
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2. CD to the project folder:
+   ```bash
+   cd articles-app
+   ```
 
-- Configure the top-level `parserOptions` property like this:
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+5. Open web browser and access the app at https://localhost:8080
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+# Usage
+1. Public Page to display All Articles.
+2. Login page for basic authentication.
+3. Protected Page for all articles of the specific logged In user.
+4. Once logged In, You can edit articles by hovering the card and pressing Edit button.
+5. To create a new Article, Press the Menu button on the Top right side to display the menu and press Create New post.
+6. Search article by Typing into the search bar and selecting which filterBy would you like to use.
