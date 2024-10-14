@@ -86,23 +86,24 @@ const LandingPage = () => {
     if (response.ok && !isEditing) {
       const responseBody = await response.json();
       const dData = listData;
+      console.log(responseBody);
       dData.unshift(responseBody);
       setListData(dData);
       setUntouchedList(dData);
       setOpenModal(false);
-      Toast('success', 'Post created successfully!');
+      Toast('success', `Article created successfully! ${JSON.stringify(responseBody)}`);
     }
 
     if (response.ok && isEditing) {
       const responseBody = await response.json();
       const dData = listData;
-
+      console.log(responseBody);
       const index = dData.findIndex((item) => item.id === responseBody.id);
       dData[index] = responseBody;
       setListData(dData);
       setUntouchedList(dData);
       setOpenModal(false);
-      Toast('success', 'Post updated successfully!');
+      Toast('success', `Article updated successfully! ${JSON.stringify(responseBody)}`);
     }
 
     if (!response.ok) {
